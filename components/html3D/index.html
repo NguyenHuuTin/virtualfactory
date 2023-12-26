@@ -1,0 +1,66 @@
+<a-scene embedded cursor="rayOrigin: mouse" virtual-factory>
+  <a-assets>
+    <img id="asset_fac01" src="./imgs/fac01.webp" />
+    <img id="asset_goahead" src="./imgs/icon/goahead1.png" />
+    <img id="asset_location" src="./imgs/icon/location.png" />
+    <img id="asset_question" src="./imgs/icon/questionMark.png" />
+  </a-assets>
+  <a-camera id="camera" rotation="0 0 0"></a-camera>
+  <a-sky id="sky_fac01" src="#asset_fac01" radius="20" position="0 0 0"></a-sky>
+  <a-entity id="entity_fac01" visible="true">
+    <a-image
+      id="image_fac01_to_fac03"
+      src="#asset_goahead"
+      position="-6 -3.811 -12"
+      rotation="90 0 -110"
+      scale="1.5 1.5 0"
+      animation="property: position; to: -6.055 -3.6 -12; dur: 1000; easing: easeInOutCirc; loop: true"
+    ></a-image>
+    <a-image
+      id="image_fac01_to_fac02"
+      src="#asset_location"
+      position="1.908 -0.492 17.419"
+      scale="1.5 2.5 0"
+      look-at="[camera]"
+      animation="property: scale; to: 1.8 2.8 0; dur: 800; easing: linear; loop: true"
+    >
+      <a-text
+        id="text_fac01_to_fac02"
+        value="Control Room"
+        position="0 1 0"
+        text="align: center; side: double; width: 8; font: https://cdn.aframe.io/fonts/Exo2Bold.fnt; wrapCount: 30; color: #000000"
+      ></a-text>
+    </a-image>
+    <a-image
+      id="image_fac01_question_machine01"
+      src="#asset_question"
+      position="16.046 -4.752 -4.874"
+      scale="0.8 0.8 0"
+      animation="property: scale; to: 1 1 0; dur: 1000; easing: linear; loop: true"
+      look-at="[camera]"
+    >
+      <a-text
+        id="text_fac02_question"
+        value="Information"
+        position="0 1 0"
+        text="align: center; side: double; width: 8; font: https://cdn.aframe.io/fonts/Exo2Bold.fnt; wrapCount: 30; color: #e03434"
+      ></a-text>
+    </a-image>
+    <a-image
+      id="image_fac01_question_machine02"
+      src="#asset_question"
+      position="3.738 -0.871 -15.355"
+      scale="0.8 0.8 0"
+      animation="property: scale; to: 1 1 0; dur: 1000; easing: linear; loop: true"
+      look-at="[camera]"
+    >
+      <a-text
+        id="text_fac02_question"
+        value="Information"
+        position="0 1 0"
+        text="align: center; side: double; width: 8; font: https://cdn.aframe.io/fonts/Exo2Bold.fnt; wrapCount: 30; color: #ffffff"
+      ></a-text>
+    </a-image>
+  </a-entity>
+  <a-entity id="entity_fac02" visible="false"> </a-entity>
+</a-scene>
